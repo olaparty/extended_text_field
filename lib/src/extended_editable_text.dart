@@ -1292,8 +1292,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
   ///whether to support build SpecialText
   bool get supportSpecialText =>
       widget.specialTextSpanBuilder != null &&
-      !widget.obscureText &&
-      _textDirection == TextDirection.ltr;
+      !widget.obscureText;
 
   /// Whether to create an input connection with the platform for text editing
   /// or not.
