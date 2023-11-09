@@ -2480,9 +2480,10 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
   }
 
   void _startOrStopCursorTimerIfNeeded() {
-    if (_cursorTimer == null && _hasFocus && _value.selection.isCollapsed)
+    // 没有焦点时也保留光标
+    if (_cursorTimer == null && _value.selection.isCollapsed)
       _startCursorTimer();
-    else if (_cursorActive && (!_hasFocus || !_value.selection.isCollapsed))
+    else if (_cursorActive && !_value.selection.isCollapsed)
       _stopCursorTimer();
   }
 
