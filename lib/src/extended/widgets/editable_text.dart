@@ -163,8 +163,7 @@ class ExtendedEditableTextState extends _EditableTextState {
   /// whether to support build SpecialText
   bool get supportSpecialText =>
       extendedEditableText.specialTextSpanBuilder != null &&
-      !widget.obscureText &&
-      _textDirection == TextDirection.ltr;
+      !widget.obscureText;
 
   // State lifecycle:
 
