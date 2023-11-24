@@ -3495,7 +3495,6 @@ class _EditableTextState extends State<_EditableText>
   }
 
   bool get _showBlinkingCursor =>
-      _hasFocus &&
       _value.selection.isCollapsed &&
       widget.showCursor &&
       _tickersEnabled;
